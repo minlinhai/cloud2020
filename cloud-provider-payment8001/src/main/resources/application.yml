@@ -1,6 +1,8 @@
+#服务器端口配置
 server:
   port: 8001
 
+#数据源的配置
 spring:
   application:
     name: cloud-payment-service
@@ -11,6 +13,12 @@ spring:
     username: root
     password: smalltiger
 
+#mybaits配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.minlh.sprigncloud.entity
+  type-aliases-package: com.minlh.sprigncloud.entities
+
+#开启调试模式
+#debug: true
+
+
