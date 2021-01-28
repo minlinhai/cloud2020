@@ -21,4 +21,11 @@ mybatis:
 #开启调试模式
 #debug: true
 
+#配置Eureka
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server1:7001/eureka/
 
