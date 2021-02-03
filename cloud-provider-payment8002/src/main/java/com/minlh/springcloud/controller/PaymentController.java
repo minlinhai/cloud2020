@@ -1,12 +1,12 @@
-package springcloud.controller;
+package com.minlh.springcloud.controller;
 
 import com.minlh.springcloud.entities.CommonResult;
 import com.minlh.springcloud.entities.Payment;
+import com.minlh.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import springcloud.service.PaymentService;
 
 @RestController
 @Slf4j
@@ -42,7 +42,7 @@ public class PaymentController {
     public CommonResult<Payment> getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
         if(payment!=null) {
-            return new CommonResult(200,"获取数据成功001,serverport=\"+serverPort",payment);
+            return new CommonResult(200,"获取数据成功001,serverport="+serverPort,payment);
         }else {
             return new CommonResult(444,"获取数据失败,serverport="+serverPort,null);
         }

@@ -1,4 +1,4 @@
-package springcloud.service;
+package com.minlh.springcloud.service;
 
 import com.minlh.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Param;
