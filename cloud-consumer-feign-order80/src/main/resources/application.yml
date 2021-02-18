@@ -1,0 +1,9 @@
+server:
+  port: 80
+#配置Eureka
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      #Eureka实例名:端口号  也就是Eureka服务端service-url:配置的地址
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
