@@ -10,12 +10,17 @@ eureka:
       #单机环境：Eureka实例名:端口号  也就是Eureka服务端service-url:配置的地址
       defaultZone: http://eureka7001.com:7001/eureka/
 
+#开启feign对Hystrix的支持
+feign:
+  hystrix:
+    enabled: true
+
 #设置feign客户端超时时间（OpenFeign默认支持ribbon）
-ribbon:
+#ribbon:
   #该配置是指建立连接所用的时间，适用于网络状况正常情况下。两端连接所用的时间
-  ReadTimeout: 5000
+  #ReadTimeout: 5000
   #该配置是指建立连接后从服务器读取到可用资源所用的时间
-  ConnectTimeout: 5000
+  #ConnectTimeout: 5000
 
 #logging:
   #level:
