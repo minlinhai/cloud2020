@@ -1,0 +1,26 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center #注册Eureka服务器的微服务名称
+  cloud:
+    config:
+      server:
+        git:
+          #uri: git@github.com:minlinhai/springcloud-config.git  #gitHub上面配置中心的仓库名
+          uri: https://github.com/minlinhai/springcloud-config.git  #gitHub上面配置中心的仓库名
+          default-label: main  #加入这个配置就可以正常请求到git上的配置文件了
+          username: minlinhai@outlook.com
+          password: SMALLtiger818
+          #搜索目录
+          search-paths:
+            - springcloud-config
+      #读取的分支
+      #label: master
+
+#将服务注册到Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
