@@ -1,5 +1,5 @@
 server:
-  port: 8801
+  port: 8802
 
 spring:
   application:
@@ -17,7 +17,7 @@ spring:
                 username: guest
                 password: guest
       bindings: #服务的整合处理
-        output: #这个名字是一个通道的名称
+        input: #这个名字是一个通道的名称
           destination: studyExchange # 表示使用的Exchange名称定义
           content-type: application/json # 设置消息的类型，本次为json,文本则设置“text/plain”
           binder: defaultRabbit #设置要丙丁的消息服务的具体设置
@@ -30,5 +30,5 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 2 #设置心跳的时间间隔
     lease-expiration-duration-in-seconds: 10 # 如果现在超过了5秒的间隔
-    instance-id: send-8801.com # 在信息列表里显示主机名称
+    instance-id: receive-8802.com # 在信息列表里显示主机名称
     prefer-ip-address: true # 访问路径变为ip地址
