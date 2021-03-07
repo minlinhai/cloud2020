@@ -20,7 +20,8 @@ spring:
         input: #这个名字是一个通道的名称
           destination: studyExchange # 表示使用的Exchange名称定义
           content-type: application/json # 设置消息的类型，本次为json,文本则设置“text/plain”
-          binder: defaultRabbit #设置要丙丁的消息服务的具体设置
+          #binder: defaultRabbit #设置要丙丁的消息服务的具体设置
+          group: minlhA #自定义分组
 
 #Eureka配置
 eureka:
